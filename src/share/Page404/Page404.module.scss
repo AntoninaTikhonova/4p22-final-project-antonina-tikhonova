@@ -1,0 +1,21 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: maroon;
+    color: azure;
+
+}
+
+.title {
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 24px;
+    font-weight: 700;
+}
