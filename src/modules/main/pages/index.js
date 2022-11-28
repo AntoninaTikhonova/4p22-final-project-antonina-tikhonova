@@ -1,3 +1,6 @@
-import Main from "./pages/Main/main";
+import Product from "./Product/Product";
+import Cart from "./Cart/Cart";
+import Main from "./Main/Main";
+import Support from "./Support/Support";
 
-export { Main }
+export { Product, Cart, Main, Support }

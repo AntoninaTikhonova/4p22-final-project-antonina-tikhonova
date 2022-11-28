@@ -1,0 +1,23 @@
+.root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 5% 0px  ;
+}
+
+.text {
+  width: 80%;
+  padding-left: 17px;
+  text-align: left;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #FFFFFF;
+
+  @media (max-width: 375px) {
+    width: 80%;
+    font-size: 0.8em;
+  }
+}
