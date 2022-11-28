@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/4p22-final-project-antonina-tikhonova/static/css/main.073c9b0a.css",
-    "main.js": "/4p22-final-project-antonina-tikhonova/static/js/main.dd9e6c7f.js",
-    "static/js/787.fc98b2b8.chunk.js": "/4p22-final-project-antonina-tikhonova/static/js/787.fc98b2b8.chunk.js",
-    "static/media/logo.svg": "/4p22-final-project-antonina-tikhonova/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/4p22-final-project-antonina-tikhonova/static/css/main.9ec9c6c6.css",
+    "main.js": "/4p22-final-project-antonina-tikhonova/static/js/main.7bdfaa82.js",
+    "static/media/logo.png": "/4p22-final-project-antonina-tikhonova/static/media/logo.e1344a3af4534d9980d3.png",
+    "static/media/trolley.png": "/4p22-final-project-antonina-tikhonova/static/media/trolley.ed74b7d514c4c78ae371.png",
     "index.html": "/4p22-final-project-antonina-tikhonova/index.html",
-    "main.073c9b0a.css.map": "/4p22-final-project-antonina-tikhonova/static/css/main.073c9b0a.css.map",
-    "main.dd9e6c7f.js.map": "/4p22-final-project-antonina-tikhonova/static/js/main.dd9e6c7f.js.map",
-    "787.fc98b2b8.chunk.js.map": "/4p22-final-project-antonina-tikhonova/static/js/787.fc98b2b8.chunk.js.map"
+    "main.9ec9c6c6.css.map": "/4p22-final-project-antonina-tikhonova/static/css/main.9ec9c6c6.css.map",
+    "main.7bdfaa82.js.map": "/4p22-final-project-antonina-tikhonova/static/js/main.7bdfaa82.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.dd9e6c7f.js"
+    "static/css/main.9ec9c6c6.css",
+    "static/js/main.7bdfaa82.js"
   ]
 }
