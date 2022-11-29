@@ -36,7 +36,7 @@ const Product = () => {
     return <MainLayout>
         <div className={s.root}>
             <Button 
-                onClick={() => navigate('/4p22-final-project-antonina-tikhonova')} 
+                onClick={() => navigate('/4p22-final-project-antonina-tikhonova/public')} 
                 text='Назад' 
             />
             { isLoading ? (

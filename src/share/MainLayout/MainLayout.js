@@ -31,7 +31,7 @@ const MainLayout = (props) => {
             </header>
             <section className={s.navigation}>
                 <div className={s.navigation__left}>
-                    <a className={s.navigation__link} onClick={() => navigate('/4p22-final-project-antonina-tikhonova')}>
+                    <a className={s.navigation__link} onClick={() => navigate('/4p22-final-project-antonina-tikhonova/public')}>
                         Все товары
                     </a>
                     <a className={s.navigation__link} onClick={() => navigate('/support')}>

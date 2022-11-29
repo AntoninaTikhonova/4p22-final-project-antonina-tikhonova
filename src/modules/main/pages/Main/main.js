@@ -67,7 +67,6 @@ const Main = () => {
             />
         ))
     }
-
     const renderE71 = () => {
             const bmwE71 = products.filter((product) =>
             product.category === 'BMW X6 E71') ;
@@ -85,6 +84,7 @@ const Main = () => {
             />
         ))
     }
+    // const categories =new Set(products.map((product) => product.category))
 
     return (
         <MainLayout>
@@ -98,14 +98,12 @@ const Main = () => {
                         alt='clear'
                     />
                 )}
-                <div className={s.input}>
-                    <Input 
-                        className={s.form} 
-                        onChange={(event) => (setSearch(event.target.value))} 
-                        value={search} 
-                        placeholder={'Поиск...'} 
-                    />
-                </div>
+                <Input 
+                    className={s.form} 
+                    onChange={(event) => (setSearch(event.target.value))} 
+                    value={search} 
+                    placeholder={'Поиск...'} 
+                />
                 <div className={s.buttons}>
                     <Button
                         onClick={(event) => {renderE70()}}
