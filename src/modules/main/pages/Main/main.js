@@ -70,7 +70,7 @@ const Main = () => {
 
     const renderE71 = () => {
             const bmwE71 = products.filter((product) =>
-            product.category === 'BMW X5 E71') ;
+            product.category === 'BMW X6 E71') ;
 
         console.log(bmwE71)
 

@@ -17,10 +17,15 @@ const Product = () => {
         setIsLoading(true)
         api.fetchProduct(params.productId).then(data => { 
             setProductInfo(data)
-            console.log(data)
+            // console.log(data)
             setIsLoading(false)
         })
     }, [params])
+
+    const clickPlus = (event) => {
+        event.preventDefault(event)
+        console.log(params)
+    }
 
     // const addToCart = (event) => {
     //     event.preventDefault();
@@ -31,9 +36,9 @@ const Product = () => {
     return <MainLayout>
         <div className={s.root}>
             <Button 
-                onClick={() => navigate('/')} 
-                text='Назад'                />
-
+                onClick={() => navigate('/4p22-final-project-antonina-tikhonova')} 
+                text='Назад' 
+            />
             { isLoading ? (
                 <h1>Loading...</h1>
             ) : productInfo ? (
@@ -48,8 +53,10 @@ const Product = () => {
             )}
             <div className={s.toCart}>
                 <Button text='-' />        
-                <div></div>
-                <Button text='+' />        
+                <div className={s.qwantity }>0</div>
+                <Button 
+                    onClick={clickPlus} 
+                    text='+' />        
             </div>
         </div>
     </MainLayout>

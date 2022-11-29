@@ -13,7 +13,7 @@ root.render(
     <BrowserRouter>
         <ErrorBoundary>
             <Routes>
-                <Route path={'/'} element={<Main />} />
+                <Route path={'/4p22-final-project-antonina-tikhonova'} element={<Main />} />
                 <Route path={'/product/:productId'} element={<Product />} />
                 <Route path={'/cart'} element={<Cart />} />
                 <Route path={'/support'} element={<Support />} />
