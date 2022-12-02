@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/4p22-final-project-antonina-tikhonova/static/css/main.98fbedc7.css",
-    "main.js": "/4p22-final-project-antonina-tikhonova/static/js/main.4ea1b288.js",
+    "main.js": "/4p22-final-project-antonina-tikhonova/static/js/main.f71fd18c.js",
     "static/media/logo.png": "/4p22-final-project-antonina-tikhonova/static/media/logo.e1344a3af4534d9980d3.png",
     "static/media/trolley.png": "/4p22-final-project-antonina-tikhonova/static/media/trolley.ed74b7d514c4c78ae371.png",
     "index.html": "/4p22-final-project-antonina-tikhonova/index.html",
     "main.98fbedc7.css.map": "/4p22-final-project-antonina-tikhonova/static/css/main.98fbedc7.css.map",
-    "main.4ea1b288.js.map": "/4p22-final-project-antonina-tikhonova/static/js/main.4ea1b288.js.map"
+    "main.f71fd18c.js.map": "/4p22-final-project-antonina-tikhonova/static/js/main.f71fd18c.js.map"
   },
   "entrypoints": [
     "static/css/main.98fbedc7.css",
-    "static/js/main.4ea1b288.js"
+    "static/js/main.f71fd18c.js"
   ]
 }
