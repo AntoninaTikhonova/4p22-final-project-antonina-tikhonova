@@ -1,3 +1,5 @@
+@import '../../../assets/styles/variables.scss';
+
 .root {
   position: relative;
   display: flex;
@@ -10,19 +12,25 @@
 .textarea {
   box-sizing: border-box;
   margin-bottom: 2%;
-  padding: 10px 15px;
+  padding: 10px 20px;
   font-family: 'Inter', sans-serif;
   text-align: justify;
-  font-size: 1.5em;
+  font-size: 20px;
   font-weight: 800;
-  color: #013976;
+  color: $color-dark;
   width: 100%;
   outline: none;
   // border: 3px solid #013976;
   border-radius: 10px;
 
-  @media (max-width: 375px) {
-    font-size: 0.8em;
+  @media (max-width: 500px) {
+    font-size: 12px;
+  }
+  @media (max-width: 800px) {
+    font-size: 14px;
+  }
+  @media (max-width: 1000px) {
+    font-size: 16px;
   }
 }
 
@@ -34,9 +42,9 @@
   position: absolute;
   top: 5px;
   right: 10px;
-  font-size: 1.5em;
+  font-size: 14px;
   font-weight: 600;
-  color: #e6230f;
+  color: $color-error;
   pointer-events: none;
   
   @media (max-width: 375px) {
@@ -47,5 +55,5 @@
 }
 
 .invalid {
-  border: 3px solid #e6230f;
+  border: 3px solid $color-error;
 }

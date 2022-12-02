@@ -12,22 +12,22 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 5% auto 5%;
-    // padding: 0 20px;
+    margin: 2% 0;
+    
+    padding-left: 1%;
 
     width: 80%;
+    max-width: 1200px;
     // height: 30px;
     // background-color: #FFFFFF;
     // border-radius: 5px;
 
-    outline: #013976;
 
     @media (max-width: 500px) {
-        width: 80%;
         height: 3%;
     }
     @media (min-width: 1000px) {
-        justify-content: space-evenly;
+        // justify-content: space-evenly;
     }
     img {
         width: 15px;
@@ -38,40 +38,27 @@
         width: 10px;
         height: 10px;
         position: absolute;
-        left: 5px;
-        top: 35%;
+        left: 20px;
+        top: 40%;
         cursor: pointer;
         z-index: 2;
 
         @media (max-width: 800px) {
             width: 7px;
             height: 7px;
-            left: 5px;
-            top: 35%;
+            left: 12px;
+            top: 40%;
         }
 
-        @media (min-width: 1000px) {
-            width: 15px;
-            height: 15px;
-            left: 36vw;
-            top: 30%;
+        @media (max-width: 1000px) {
+            left: 15px;
+            top: 40%;
         }
-        @media (min-width: 1401px) {
-            left: 36vw;
+        @media (min-width: 1601px) {
+            left: 800px;
             top: 25%;
-        }
-        @media (min-width: 2701px) {
-            width: 15px;
-            height: 15px;
-            top: 25%;
-            left: 1000px;
-
         }
     }
-}
-
-.input {
-    width: 60%;
 }
 
 .buttons {

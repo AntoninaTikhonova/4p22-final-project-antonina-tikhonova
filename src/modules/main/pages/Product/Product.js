@@ -35,10 +35,12 @@ const Product = () => {
 
     return <MainLayout>
         <div className={s.root}>
-            <Button 
-                onClick={() => navigate('/')} 
-                text='Назад' 
-            />
+            <div className={s.back}>
+                <Button 
+                    onClick={() => navigate('/')} 
+                    text='Назад' 
+                />
+            </div>
             { isLoading ? (
                 <h1>Loading...</h1>
             ) : productInfo ? (

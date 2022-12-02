@@ -11,8 +11,34 @@
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
-    width: 80%;
+    width: 800px;
     color: #FFFFFF;
     font-size: 24px;
     font-weight: 800;
+
+    @media (max-width: 800px) {
+    width: 80%;
+    }
 }
+
+@media (max-width: 500px) {
+    .root {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        // margin: 0 7%;
+        width: 100%;
+    }
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 2%;
+        width: 80%;
+        color: #FFFFFF;
+        font-size: 24px;
+        font-weight: 800;
+    }
+  }
