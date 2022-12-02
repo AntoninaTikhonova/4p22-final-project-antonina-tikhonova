@@ -2,10 +2,10 @@ import React, { useEffect, useState  } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 
 import MainLayout from '../../../../share/MainLayout/MainLayout'
-import { Button } from '../../../../share/components'
+import { Button, QwntityButton } from '../../../../share/components'
 import api from '../../config/api'
 
-import s from './product.module.scss'
+import s from './Product.module.scss'
 
 const Product = () => {
     const [isLoading, setIsLoading] = useState(false)
@@ -36,7 +36,7 @@ const Product = () => {
     return <MainLayout>
         <div className={s.root}>
             <Button 
-                onClick={() => navigate('/4p22-final-project-antonina-tikhonova/public')} 
+                onClick={() => navigate('/')} 
                 text='Назад' 
             />
             { isLoading ? (
@@ -52,9 +52,9 @@ const Product = () => {
                 'Нет товара'
             )}
             <div className={s.toCart}>
-                <Button text='-' />        
+                <QwntityButton text='-' />        
                 <div className={s.qwantity }>0</div>
-                <Button 
+                <QwntityButton 
                     onClick={clickPlus} 
                     text='+' />        
             </div>

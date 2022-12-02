@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 
 import Logo from '../../assets/img/logo.png'
+import Phone from '../../assets/img/phone.png'
+import Email from '../../assets/img/email.png'
 import Trolley from '../../assets/img/trolley.png'
 import User from '../../assets/img/user.png'
 
@@ -12,45 +14,43 @@ import s from './MainLayout.module.scss'
 const MainLayout = (props) => {
 
     const navigate = useNavigate()
-    
-
-    
 
     
     return (
         <div>
-            <header >
+            <header>
                 <div className={s.header}>
-                    <img width={40} height={40} src={Logo} alt='LOGO'></img>
+                    <img width={40} height={40} src={Logo} alt='LOGO' />
                     <h3>Сибирский Мишка</h3>
                 </div>
-                <div className={s.header__user}>
+                <div className={s.contacts}>
+                    <div className={s.phone}>
+                        <img width={15} height={15} src={Phone} alt='Phone' />
+                        + 7 (123) 456-78-90
+                    </div>
+                    <div className={s.email}>
+                        <img width={15} height={15} src={Email} alt='Email' />
+                        SiberianBear@nsk.ru
+                    </div>
+                </div>
+                <div className={s.user}>
                         <img width={30} height={30} src={User} alt='user'
-                        onClick={() => navigate('/registration')}></img>
+                        onClick={() => navigate('/registration')} />
                 </div>
             </header>
-            <section className={s.navigation}>
-                <div className={s.navigation__left}>
-                    <a className={s.navigation__link} onClick={() => navigate('/4p22-final-project-antonina-tikhonova/public')}>
-                        Все товары
+            <nav className={s.navigation}>
+                    <a className={s.navigation__link} onClick={() => navigate('/')}>
+                        Товары
                     </a>
                     <a className={s.navigation__link} onClick={() => navigate('/support')}>
                         Форма обратной связи
                     </a>
                     
-                </div>
-                <div className={s.navigation__right}>        
                     <div className={s.navigation__cart} onClick={() => navigate('/cart')}>
                         <img width={30} height={30} src={Trolley} alt='cart'></img>
                     </div>
-                    {/* <div className={s.navigation__amount}>
-                        сумма: {''}
-                        <span className={s.navigation__amount_value}>15000</span>
-                    </div> */}
-                </div>
-            </section>
+            </nav>
             <div className={s.content}>
-                {/* <h2 { searchValue ? `Поиск по запросу: "${searchValue}"` : ' ' }></h2> */}
                 {props.children}
             </div>
         </div>

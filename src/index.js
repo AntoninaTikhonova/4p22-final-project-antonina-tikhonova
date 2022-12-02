@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter , Routes, Route } from 'react-router-dom'
 
 import './index.css';
 
@@ -10,10 +10,10 @@ import { MyComponent, ErrorBoundary } from './share';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <BrowserRouter>
+    <HashRouter >
         <ErrorBoundary>
             <Routes>
-                <Route path={'/4p22-final-project-antonina-tikhonova/public'} element={<Main />} />
+                <Route path={'/'} element={<Main />} />
                 <Route path={'/product/:productId'} element={<Product />} />
                 <Route path={'/cart'} element={<Cart />} />
                 <Route path={'/support'} element={<Support />} />
@@ -22,7 +22,7 @@ root.render(
                 <Route path={'*'} element={ <MyComponent /> } />
             </Routes>
         </ErrorBoundary>
-    </BrowserRouter>
+    </HashRouter >
 );
 
 

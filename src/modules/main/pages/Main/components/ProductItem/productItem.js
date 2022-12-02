@@ -1,8 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import { Button } from "../../../../../../share/components";
-import s from './productItem.module.scss'
+import { QwntityButton } from "../../../../../../share/components";
+import s from './ProductItem.module.scss'
 
 const ProductItem = (props) => {
     const {id, image, title, price } = props
@@ -31,13 +31,17 @@ const ProductItem = (props) => {
                 
             </div>
             <div className={s.toCart}>
-                    <Button
+                    <div className={s.button}>
+                        <QwntityButton
                         // onClick={clickMinus} 
-                        text='-' />        
+                        text='-' />             
+                    </div>   
                     <div className={s.qwantity}>0</div>
-                    <Button 
+                    <div className={s.button}>
+                        <QwntityButton 
                         onClick={clickPlus} 
-                        text='+' />        
+                        text='+' /> 
+                    </div>       
                 </div>
         </div>
 

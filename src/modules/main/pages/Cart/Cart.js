@@ -2,7 +2,7 @@ import React , { useState } from 'react'
 import MainLayout from '../../../../share/MainLayout/MainLayout'
 
 import { CART_PRODUCTS } from '../../config/_staticCart'
-import { CartItem } from './components'
+import { CartItem } from './components/'
 import { Button } from '../../../../share/components'
 
 import s from './Cart.module.scss'
@@ -23,7 +23,7 @@ const Cart = () => {
                                 (cartProducts.length !==0 ? 
                                     console.log(cartProducts) : 
                                     console.log('Товары не выбраны'))}
-                            text='Заказать'/>
+                            text='Оформить заказ'/>
                     </div>
                 
                 {cartProducts.map((cartProduct) => (

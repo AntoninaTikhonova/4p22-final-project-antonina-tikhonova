@@ -1,6 +1,6 @@
 import { Button } from '../../../../../../share/components'
 
-import s from './cartItem.module.scss'
+import s from './CartItem.module.scss'
 
 const CartItem = (props) => {
   const { id, title, image, price, cartProducts, setCartProducts } = props

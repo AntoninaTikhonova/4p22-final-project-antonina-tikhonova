@@ -5,7 +5,7 @@
     position: relative;
     display: flex;
     justify-content: center;
-    margin-bottom: 2%;
+    // margin-bottom: 2%;
     width: 80%;
     max-width: 800px;
     
@@ -38,7 +38,7 @@
     right: 10px;
     font-size: 1.5em;
     font-weight: 600;
-    color: #e6230f;
+    color: #E6230F;
     pointer-events: none;
 
     @media (max-width: 375px) {

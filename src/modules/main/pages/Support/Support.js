@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 
 
 import MainLayout from "../../../../share/MainLayout/MainLayout";
-import { Input, Button, Textarea}  from "../../../../share/components";
+import { Input, Button, Textarea }  from "../../../../share/components";
 
 import s from './Support.module.scss'
 

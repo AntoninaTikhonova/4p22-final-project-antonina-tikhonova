@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { MainLayout } from '../../../../share'
 import { Button, Input, Textarea } from '../../../../share/components'
 
-import s from './registration.module.scss'
+import s from './Registration.module.scss'
 
 const Registration = () => {
 

@@ -3,9 +3,6 @@ import React, { useEffect, useState } from 'react'
 import { MainLayout } from '../../../../share'
 import api from '../../config/api'
 import { ProductItem } from './components' 
-// import Product from '../Product/Product'
-// import { PRODUCTS } from '../../../../mocks/_mocks'
-import Search from '../../../../assets/img/search.png'
 import Clear from '../../../../assets/img/clear.png'
 
 import s from './Main.module.scss'
@@ -15,81 +12,36 @@ const Main = () => {
     const [products, setProducts] = useState([])
     const [isLoading, setIsLoading] = useState(false)
     const [search, setSearch] = useState('')
-    // const [options, setOptions] = useState('')
-    
-    // console.log(products)
+    const [totalProducts, setTotalPrducts] = useState([])
+    const [category, setCategory] = useState('all')
         
     useEffect( () => {
         setIsLoading(true)
         api.fetchProducts().then(data => {
             setProducts(data)
-            // console.log(data)
+            setTotalPrducts(data)
             setIsLoading(false)
         })
     }, [])
 
-    const renderItems = () => {
-
-        const filteredItems = products.filter((product) =>
+    useEffect( () => {
+        let foundItems = products.filter((product) => 
             product.title.toLowerCase().includes(search.toLowerCase()),
-        );
-        // console.log(filteredItems)
-        return (!isLoading ?  filteredItems.map((product) => (
+        )
+        if (category === 'BMW X5 E70') {
+            foundItems = foundItems.filter((product) => product.category === 'BMW X5 E70')
+        } if (category === 'BMW X6 E71') {
+            foundItems = foundItems.filter((product) => product.category === 'BMW X6 E71')
+        } if (category === 'all') {
+            foundItems = foundItems
+        }
+        setTotalPrducts(foundItems) 
+    }, [search, products, category])
 
-            <ProductItem 
-                key={product.id} 
-                id={product.id}
-                image={product.image} 
-                title={product.title} 
-                price={product.price} 
-            />
-            
-        )) : 
-        (
-            <h1>Loading...</h1>
-        ))
-    }
-    
-    const renderE70 = () => {
-            const bmwE70 = products.filter((product) =>
-            product.category === 'BMW X5 E70') ;
-
-        console.log(bmwE70)
-
-        return bmwE70.map((product) => (
-
-            <ProductItem 
-                key={product.id} 
-                id={product.id}
-                image={product.image} 
-                title={product.title} 
-                price={product.price} 
-            />
-        ))
-    }
-    const renderE71 = () => {
-            const bmwE71 = products.filter((product) =>
-            product.category === 'BMW X6 E71') ;
-
-        console.log(bmwE71)
-
-        return bmwE71.map((product) => (
-
-            <ProductItem 
-                key={product.id} 
-                id={product.id}
-                image={product.image} 
-                title={product.title} 
-                price={product.price} 
-            />
-        ))
-    }
-    // const categories =new Set(products.map((product) => product.category))
 
     return (
         <MainLayout>
             <div className={s.search}>
-                {/* <img  src={Search} alt='search'/> */}
                 {search && (
                     <img 
                         className={s.search__clear}
@@ -106,16 +58,35 @@ const Main = () => {
                 />
                 <div className={s.buttons}>
                     <Button
-                        onClick={(event) => {renderE70()}}
+                        onClick={() => {setCategory('all')}}
+                        text='Все'
+                    />
+                    <Button
+                        onClick={() => {setCategory('BMW X5 E70')}}
                         text='E70'
                     />
                     <Button
-                        onClick={(event) => {renderE71()}}
+                        onClick={() => {setCategory('BMW X6 E71')}}
                         text='E71'
                     />
                 </div>
             </div>
-            <div className={s.root}>{renderItems()}</div>
+            <div className={s.root}>{
+                !isLoading ?  totalProducts.map((product) => (
+
+                    <ProductItem 
+                        key={product.id} 
+                        id={product.id}
+                        image={product.image} 
+                        title={product.title} 
+                        price={product.price} 
+                    />
+                    
+                )) : 
+                (
+                    <h1>Loading...</h1>
+                )
+            }</div>
         </MainLayout>
     )
 }

@@ -1,4 +1,4 @@
-import {Component} from 'react';
+import { Component } from 'react';
 
 import s from './ErrorBoundary.module.scss'
 
